@@ -45,7 +45,7 @@ app.post('/ingredients', async (req, res) => {
     });
 
 app.get('/ingredients', async (req, res) => {
-    const ingredients = await Ingredient.find({refrigerator: req.body.refrigerator});
+    const ingredients = await Ingredient.find({refrigerator: new mongoose.Types.ObjectId(req.query.refrigerator)});
     res.json(ingredients);
     });
 
