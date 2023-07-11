@@ -18,18 +18,20 @@ function Fridge({navigation}) {
   //   category: '',
   // });
 
-  // useEffect(() => {
-  //   const getData = async () => {
-  //     try {
-  //       const response = await axios.get('http://10.0.2.2:8000/api');
-  //       console.log(response.data);
-  //       setData(response.data);
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   };
-  //   getData();
-  // }, []);
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const response = await axios.get('http://10.0.2.2:3000/refrigerators/:id', {  params: {
+          refrigerator: '64acd0e132c3c5fb80adec96'
+        }});
+        console.log(response.data);
+        setData(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getData();
+  }, []);
 
   return (
     <View style={styles.container}>

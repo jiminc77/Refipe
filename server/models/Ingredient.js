@@ -3,10 +3,10 @@ const Schema = mongoose.Schema;
 
 const IngredientSchema = new Schema({
     _id: Schema.Types.ObjectId,
-    productName: String,
-    expirationDate: Date,
-    count: Number,
-    memo: String,
+    name: String,
+    date: Date,
+    quantity: Number,
+    // memo: String,
     refrigerator: { type: Schema.Types.ObjectId, ref: 'Refrigerator' },
     category: String
   });
