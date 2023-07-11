@@ -9,26 +9,26 @@ const mongoose = require('mongoose');
 //     console.log(res.data);
 //     }).catch(err => console.error(err));
 
-// axios.post('http://localhost:3000/ingredients', {
-//   _id: new mongoose.Types.ObjectId(),
-//   productName: '오이',
-//   expirationDate: new Date(2023, 8, 31),
-//   count: 3,
-//   memo: '맛없어요',
-//   refrigerator: '64acd0e132c3c5fb80adec96',
-//   category: '채소'
-// }).then(res => {
-//     ingredientId = res.data._id;
-//     console.log(res.data);
-//     }).catch(err => console.error(err));
+axios.post('http://localhost:3000/ingredients', {
+  _id: new mongoose.Types.ObjectId(),
+  name: '오이',
+  date: '2023-08-31',
+  quantity: 1,
+  // memo: '맛없어요',
+  refrigerator: '64ad2112e7292dafc5789215',
+  category: '채소'
+}).then(res => {
+    ingredientId = res.data._id;
+    console.log(res.data);
+    }).catch(err => console.error(err));
 
 
-axios.get('http://localhost:3000/ingredients', {
-  params: {
-    refrigerator: '64acd0e132c3c5fb80adec96'
-  }
-}).then(res => console.log(res.data))
-  .catch(err => console.error(err));
+// axios.get('http://localhost:3000/ingredients', {
+//   params: {
+//     refrigerator: '64acd0e132c3c5fb80adec96'
+//   }
+// }).then(res => console.log(res.data))
+//   .catch(err => console.error(err));
 
 // axios.put(`http://localhost:3000/ingredients/${ingredientId}`, {
 //   count: 15

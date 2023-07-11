@@ -21,8 +21,8 @@ function Fridge({navigation}) {
   useEffect(() => {
     const getData = async () => {
       try {
-        const response = await axios.get('http://10.0.2.2:3000/refrigerators/:id', {  params: {
-          refrigerator: '64acd0e132c3c5fb80adec96'
+        const response = await axios.get('http://10.0.2.2:3000/ingredients', {  params: {
+          refrigerator: '64ad2112e7292dafc5789215'
         }});
         console.log(response.data);
         setData(response.data);

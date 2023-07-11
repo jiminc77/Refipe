@@ -8,7 +8,7 @@ const Ingredient = require('./models/Ingredient');
 
 const app = express();
 app.use(bodyParser.json());
-app.use(cors({ credentials: true, origin: "http://10.0.2.2:3000" }));
+app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
 
 mongoose.connect('mongodb://localhost:27017/mydatabase', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('몽고DB 연결 성공'))
